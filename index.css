@@ -163,6 +163,6 @@ nav {
   background-image: linear-gradient(to bottom, transparent, black);
 }
 
-.card:nth-of-type(4) {
+.blurred {
   filter: blur(0.25rem);
 }
