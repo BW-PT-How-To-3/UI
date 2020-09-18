@@ -100,6 +100,47 @@ nav {
 
 /*** CONTENT TEASER SECTION ***/
 
+.selection {
+  font-size: 1.6rem;
+  padding: 2rem 0;
+  justify-self: center;
+}
+
+.selection a {
+  padding: 0.5rem 1rem;
+  margin-right: 0.5rem;
+}
+
+.inactive {
+  color: #c3c3c3;
+}
+
+.inactive:hover {
+  background-color: #f5f5f5;
+  border: 1px solid #c3c3c3;
+  border-radius: 0.25rem;
+  color: #000;
+}
+
+.active {
+  color: #1976d1;
+  border: 1px solid rgba(25, 118, 210, 0.5);
+  background: #f5f5f5;
+  border-radius: 0.25rem;
+}
+
+.active:hover {
+  border-color: #1976d1;
+}
+
+.sort i {
+  padding-right: 0.5rem;
+}
+
+.range i {
+  padding-left: 0.5rem;
+}
+
 .teaser {
   display: grid;
   grid-template-columns: minmax(100px, 600px);
@@ -114,7 +155,7 @@ nav {
   display: grid;
   align-items: center;
   justify-content: space-between;
-  grid-template-columns: 100px 1fr 100px;
+  grid-template-columns: 100px 1fr 50px;
   padding: 10px;
   margin-top: 10px;
   box-shadow: 2rem 2rem 6rem rgba(0, 0, 0, 0.15);
@@ -130,6 +171,24 @@ nav {
   justify-self: start;
   font-weight: 600;
   padding: 0.25rem 0;
+  margin-bottom: 0.5rem;
+}
+
+.action-item {
+  font-size: 1.2rem;
+  margin-right: 0.5rem;
+  padding: 0.25rem 0.5rem;
+  color: #555;
+  border-radius: 0.25rem;
+}
+
+.action-item:hover {
+  background-color: #555;
+  color: #fff;
+}
+
+.card-content i {
+  padding-right: 0.5rem;
 }
 
 .thumbnail {
@@ -140,10 +199,17 @@ nav {
 }
 
 .upvote {
+  display: grid;
+  grid-template-columns: 1fr;
   align-self: center;
-  justify-self: center;
+  justify-items: center;
+  justify-self: end;
   font-weight: 400;
   color: #555;
+}
+
+.upvote a:hover {
+  color: #000;
 }
 
 .upvote i {
@@ -165,4 +231,66 @@ nav {
 
 .blurred {
   filter: blur(0.25rem);
+}
+
+/* ABOUT PAGE */
+
+.hero img {
+  width: 80%;
+  min-width: 100px;
+  max-width: 225px;
+  margin-top: 1rem;
+}
+
+.about {
+  min-height: 30vh;
+  padding: 2rem;
+}
+
+.mini-logo {
+  text-transform: uppercase;
+  font-weight: 800;
+}
+
+.mini-logo span {
+  color: #cccccc;
+}
+
+/* TEAM MEMBER */
+
+.meet-the-team {
+  display: grid;
+  grid-template-columns: minmax(100px, 1000px);
+  justify-content: center;
+}
+
+.team {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 225px);
+  justify-content: center;
+  justify-items: center;
+  gap: 2rem;
+}
+
+.team-member {
+  background: #eee;
+  border-radius: 0.5rem;
+  text-align: center;
+  box-shadow: 2rem 2rem 6rem rgba(0, 0, 0, 0.15);
+}
+
+.team-member:hover {
+  transition: 450ms;
+  transform: scale(1.02);
+}
+
+.team-member img {
+  width: 100%;
+  height: 225px;
+  object-fit: cover;
+  border-radius: 0.5rem 0.5rem 0 0rem;
+}
+
+.member-info {
+  padding: 1rem;
 }
