@@ -266,14 +266,14 @@ nav {
 
 .team {
   display: grid;
-  grid-template-columns: repeat(auto-fit, 225px);
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   justify-content: center;
   justify-items: center;
   gap: 2rem;
 }
 
 .team-member {
-  background: #eee;
+  background-color: #eee;
   border-radius: 0.5rem;
   text-align: center;
   box-shadow: 2rem 2rem 6rem rgba(0, 0, 0, 0.15);
