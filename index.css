@@ -114,7 +114,7 @@ nav {
   display: grid;
   align-items: center;
   justify-content: space-between;
-  grid-template-columns: 100px 1fr 100px;
+  grid-template-columns: 100px 1fr 50px;
   padding: 10px;
   margin-top: 10px;
   box-shadow: 2rem 2rem 6rem rgba(0, 0, 0, 0.15);
@@ -130,6 +130,24 @@ nav {
   justify-self: start;
   font-weight: 600;
   padding: 0.25rem 0;
+  margin-bottom: 0.5rem;
+}
+
+.action-item {
+  font-size: 1.2rem;
+  margin-right: 0.5rem;
+  padding: 0.25rem 0.5rem;
+  color: #555;
+  border-radius: 0.25rem;
+}
+
+.action-item:hover {
+  background-color: #555;
+  color: #fff;
+}
+
+.card-content i {
+  padding-right: 0.5rem;
 }
 
 .thumbnail {
@@ -140,10 +158,17 @@ nav {
 }
 
 .upvote {
+  display: grid;
+  grid-template-columns: 1fr;
   align-self: center;
-  justify-self: center;
+  justify-items: center;
+  justify-self: end;
   font-weight: 400;
   color: #555;
+}
+
+.upvote a:hover {
+  color: #000;
 }
 
 .upvote i {
