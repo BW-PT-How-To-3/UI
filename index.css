@@ -129,6 +129,10 @@ nav {
   border-radius: 0.25rem;
 }
 
+.active:hover {
+  border-color: #1976d1;
+}
+
 .sort i {
   padding-right: 0.5rem;
 }
@@ -227,4 +231,53 @@ nav {
 
 .blurred {
   filter: blur(0.25rem);
+}
+
+/* ABOUT PAGE */
+
+.hero img {
+  width: 80%;
+  min-width: 100px;
+  max-width: 225px;
+  margin-top: 1rem;
+}
+
+.about {
+  min-height: 30vh;
+  padding: 2rem;
+}
+
+.mini-logo {
+  text-transform: uppercase;
+  font-weight: 800;
+}
+
+.mini-logo span {
+  color: #cccccc;
+}
+
+/* TEAM MEMBER */
+
+.meet-the-team {
+  display: grid;
+  grid-template-columns: minmax(100px, 600px);
+  justify-content: center;
+}
+
+.team {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  justify-items: center;
+  gap: 2rem;
+}
+
+.team-member {
+  background: #eee;
+  border-radius: 0.5rem;
+  text-align: center;
+}
+
+.team-member img {
+  width: 100%;
+  border-radius: 0.5rem 0.5rem 0 0rem;
 }
