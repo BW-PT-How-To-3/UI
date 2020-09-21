@@ -402,3 +402,13 @@ footer p {
     border-radius: 3px;
   }
 }
+
+@media screen and (max-width: 375px) {
+  .menu a {
+    font-size: 1.1rem;
+  }
+
+  .footer-menu {
+    font-size: 0.9rem;
+  }
+}
