@@ -28,7 +28,7 @@ a {
 /*** COMPONENTS ***/
 
 .button {
-  border: 1px solid #ccc;
+  border: 1px solid #242423;
   border-radius: 6px;
   padding: 10px;
   font-weight: 500;
@@ -40,17 +40,22 @@ a {
 .button:hover {
   transition: 450ms;
   transform: scale(1.02);
+  background-color: #242423;
+  border: 1px solid #242423;
 }
 
 /****** NAVIGATION ******/
 nav {
   display: grid;
   grid-auto-flow: column;
-  justify-items: space-between;
   align-items: center;
-  padding: 0.5rem 1rem;
   border-bottom: 1px solid #cccccc;
   padding: 2rem;
+}
+
+.active-menu {
+  color: #eb3844;
+  font-weight: 600;
 }
 
 .logo {
@@ -74,10 +79,12 @@ nav {
 
 .hero {
   display: grid;
-  min-height: 25vh;
   justify-content: center;
   justify-items: center;
   align-content: center;
+  gap: 1rem;
+  padding: 1rem 2rem;
+  min-height: 350px;
 }
 
 .hero .button {
@@ -92,13 +99,22 @@ nav {
   text-align: center;
 }
 
-.secondary-headline {
+.sub-head {
   font-size: 1.6rem;
   font-weight: 500;
   text-align: center;
 }
 
 /*** CONTENT TEASER SECTION ***/
+
+.teaser {
+  display: grid;
+  grid-template-columns: minmax(100px, 600px);
+  justify-content: center;
+  padding: 2rem;
+}
+
+/*SELECTION and FILTER STYLING */
 
 .selection {
   font-size: 1.6rem;
@@ -141,12 +157,7 @@ nav {
   padding-left: 0.5rem;
 }
 
-.teaser {
-  display: grid;
-  grid-template-columns: minmax(100px, 600px);
-  justify-content: center;
-  padding: 2rem;
-}
+/* CARDS */
 
 .card {
   min-height: 100px;
@@ -216,21 +227,20 @@ nav {
   padding-right: 5px;
 }
 
-.fade-box {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  text-align: center;
-  margin: 0;
-  padding: 30px 0;
-
-  /* "transparent" only works here because == rgba(0,0,0,0) */
-  background-image: linear-gradient(to bottom, transparent, black);
-}
-
 .blurred {
   filter: blur(0.25rem);
+}
+
+/* View More Button */
+
+.view-more {
+  justify-self: center;
+  padding: 1.5rem;
+  text-decoration: underline;
+}
+
+.view-more:hover {
+  font-weight: 700;
 }
 
 /* ABOUT PAGE */
@@ -243,7 +253,7 @@ nav {
 }
 
 .about {
-  min-height: 30vh;
+  min-height: 300px;
   padding: 2rem;
 }
 
@@ -262,6 +272,7 @@ nav {
   display: grid;
   grid-template-columns: minmax(100px, 1000px);
   justify-content: center;
+  padding: 2rem;
 }
 
 .team {
@@ -286,11 +297,68 @@ nav {
 
 .team-member img {
   width: 100%;
-  height: 225px;
+  height: 350px;
   object-fit: cover;
   border-radius: 0.5rem 0.5rem 0 0rem;
 }
 
 .member-info {
   padding: 1rem;
+}
+
+/* MEDIA SETTINGS */
+
+@media screen and (max-width: 425px) {
+  .main-headline {
+    font-size: 3.5rem;
+  }
+  nav {
+    justify-items: center;
+    justify-content: center;
+    grid-auto-flow: row;
+    gap: 2rem;
+  }
+
+  .selection {
+    font-size: 1.2rem;
+    padding: 1.5rem 0;
+    justify-self: center;
+  }
+
+  .selection a {
+    padding: 0.5rem 1rem;
+    margin-right: 0.25rem;
+  }
+
+  .sort i {
+    padding-right: 0.25rem;
+  }
+
+  .range i {
+    padding-left: 0.25rem;
+  }
+
+  .card {
+    grid-auto-flow: row;
+    grid-template-columns: 1fr;
+  }
+
+  .thumbnail {
+    width: 100%;
+    height: 225px;
+  }
+
+  .action-item {
+    font-size: 1.1rem;
+  }
+
+  .upvote {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 0.5rem;
+    font-size: 1.1rem;
+    margin: 0.25rem;
+    border-radius: 3px;
+  }
 }
