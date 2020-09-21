@@ -42,6 +42,7 @@ a {
   transform: scale(1.02);
   background-color: #242423;
   border: 1px solid #242423;
+  color: #fff;
 }
 
 /****** NAVIGATION ******/
@@ -56,6 +57,14 @@ nav {
 .active-menu {
   color: #eb3844;
   font-weight: 600;
+}
+
+.menu a:hover {
+  color: #eb3844;
+}
+
+.menu .button:hover {
+  color: #fff;
 }
 
 .logo {
@@ -241,6 +250,37 @@ nav {
 
 .view-more:hover {
   font-weight: 700;
+}
+
+/* FOOTER */
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 1rem;
+  margin: 3rem 0 2rem 0;
+  border-top: 1px solid #cccccc;
+}
+
+.footer-menu {
+  padding: 1rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+footer a {
+  padding: 1rem;
+  text-transform: capitalize;
+}
+
+footer a:hover {
+  color: #eb3844;
+}
+
+footer p {
+  color: #555;
+  font-size: 1rem;
 }
 
 /* ABOUT PAGE */
