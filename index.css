@@ -1,3 +1,109 @@
+/*
+TABLE OF CONTENTS:
+1. Reset and Setting Default
+  a. html
+  b. body
+  c. a
+
+2. Components
+  a. .button
+  b. .button:hover
+
+3. Navigation
+  a. nav
+    i. .active-menu
+    ii. .menu a:hover
+    iii. .menu .button:hover
+    iv. .logo
+    v. .logo span
+    vi. .menu
+    vii. .menu a
+
+4. Hero Section
+  a. .hero
+  b. .hero .button
+  c. .main-headline
+  d. .sub-head
+
+5. Content Teaser Section
+  a. .teaser
+
+6. Selection and Filter Styling
+  a. .selection
+  b. .selection a
+  c. .inactive
+  d. .inactive:hover
+  e. .active
+  f. .active:hover
+  g. .sort i
+  h. .range i
+
+7. Cards
+  a. .card
+  b. .card:hover
+  c. .card-headline
+  d. .action-item
+  e. .action-item:hover
+  f. .card-content i
+  g. .thumbnail
+  h. .upvote
+  i. .upvote a:hover
+  j. .upvote i
+  k. .blurred
+
+8. View More Button
+  a. .view-more
+  b. .view-more:hover
+
+9. Footer
+  a. footer
+  b. .footer-menu
+  c. .footer a
+  d. .footer a:hover
+  e. .footer p
+
+10. About Page
+  a. .hero img
+  b. .about
+  c. .mini-logo
+  d. .mini-logo span
+
+11. TEAM MEMBERS
+  a. .meet-the-team
+  b. .team
+  c. .team-member
+  d. .team-member:hover
+  e. .team-member img
+  f. .member-info
+
+12. Media Settings
+  a. (max-width: 425px)
+    i. .main-headline
+    ii. nav
+    iii. .selection
+    iv. .selection a
+    v. .sort i
+    vi. .range i
+    vii. .card
+    viii. .thumbnail
+    ix. .action-item
+    x. .upvote
+
+  b. (max-width: 375px)
+    i. .menu a
+    ii. .footer-menu a
+
+
+
+
+
+
+
+
+
+
+*/
+
 /* RESET AND SETTING DEFAULT */
 
 * {
@@ -306,7 +412,7 @@ footer p {
   color: #cccccc;
 }
 
-/* TEAM MEMBER */
+/* TEAM MEMBERS */
 
 .meet-the-team {
   display: grid;
@@ -352,6 +458,7 @@ footer p {
   .main-headline {
     font-size: 3.5rem;
   }
+  /* Put nav on two rows */
   nav {
     justify-items: center;
     justify-content: center;
@@ -378,6 +485,7 @@ footer p {
     padding-left: 0.25rem;
   }
 
+  /* Put image above headline */
   .card {
     grid-auto-flow: row;
     grid-template-columns: 1fr;
