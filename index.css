@@ -1,3 +1,109 @@
+/*
+TABLE OF CONTENTS:
+1. Reset and Setting Default
+  a. html
+  b. body
+  c. a
+
+2. Components
+  a. .button
+  b. .button:hover
+
+3. Navigation
+  a. nav
+    i. .active-menu
+    ii. .menu a:hover
+    iii. .menu .button:hover
+    iv. .logo
+    v. .logo span
+    vi. .menu
+    vii. .menu a
+
+4. Hero Section
+  a. .hero
+  b. .hero .button
+  c. .main-headline
+  d. .sub-head
+
+5. Content Teaser Section
+  a. .teaser
+
+6. Selection and Filter Styling
+  a. .selection
+  b. .selection a
+  c. .inactive
+  d. .inactive:hover
+  e. .active
+  f. .active:hover
+  g. .sort i
+  h. .range i
+
+7. Cards
+  a. .card
+  b. .card:hover
+  c. .card-headline
+  d. .action-item
+  e. .action-item:hover
+  f. .card-content i
+  g. .thumbnail
+  h. .upvote
+  i. .upvote a:hover
+  j. .upvote i
+  k. .blurred
+
+8. View More Button
+  a. .view-more
+  b. .view-more:hover
+
+9. Footer
+  a. footer
+  b. .footer-menu
+  c. .footer a
+  d. .footer a:hover
+  e. .footer p
+
+10. About Page
+  a. .hero img
+  b. .about
+  c. .mini-logo
+  d. .mini-logo span
+
+11. TEAM MEMBERS
+  a. .meet-the-team
+  b. .team
+  c. .team-member
+  d. .team-member:hover
+  e. .team-member img
+  f. .member-info
+
+12. Media Settings
+  a. (max-width: 425px)
+    i. .main-headline
+    ii. nav
+    iii. .selection
+    iv. .selection a
+    v. .sort i
+    vi. .range i
+    vii. .card
+    viii. .thumbnail
+    ix. .action-item
+    x. .upvote
+
+  b. (max-width: 375px)
+    i. .menu a
+    ii. .footer-menu a
+
+
+
+
+
+
+
+
+
+
+*/
+
 /* RESET AND SETTING DEFAULT */
 
 * {
@@ -28,7 +134,7 @@ a {
 /*** COMPONENTS ***/
 
 .button {
-  border: 1px solid #ccc;
+  border: 1px solid #242423;
   border-radius: 6px;
   padding: 10px;
   font-weight: 500;
@@ -40,17 +146,31 @@ a {
 .button:hover {
   transition: 450ms;
   transform: scale(1.02);
+  background-color: #242423;
+  border: 1px solid #242423;
+  color: #fff;
 }
 
 /****** NAVIGATION ******/
 nav {
   display: grid;
   grid-auto-flow: column;
-  justify-items: space-between;
   align-items: center;
-  padding: 0.5rem 1rem;
   border-bottom: 1px solid #cccccc;
   padding: 2rem;
+}
+
+.active-menu {
+  color: #eb3844;
+  font-weight: 600;
+}
+
+.menu a:hover {
+  color: #eb3844;
+}
+
+.menu .button:hover {
+  color: #fff;
 }
 
 .logo {
@@ -74,10 +194,12 @@ nav {
 
 .hero {
   display: grid;
-  min-height: 25vh;
   justify-content: center;
   justify-items: center;
   align-content: center;
+  gap: 1rem;
+  padding: 1rem 2rem;
+  min-height: 350px;
 }
 
 .hero .button {
@@ -92,13 +214,22 @@ nav {
   text-align: center;
 }
 
-.secondary-headline {
+.sub-head {
   font-size: 1.6rem;
   font-weight: 500;
   text-align: center;
 }
 
 /*** CONTENT TEASER SECTION ***/
+
+.teaser {
+  display: grid;
+  grid-template-columns: minmax(100px, 600px);
+  justify-content: center;
+  padding: 2rem;
+}
+
+/*SELECTION and FILTER STYLING */
 
 .selection {
   font-size: 1.6rem;
@@ -141,12 +272,7 @@ nav {
   padding-left: 0.5rem;
 }
 
-.teaser {
-  display: grid;
-  grid-template-columns: minmax(100px, 600px);
-  justify-content: center;
-  padding: 2rem;
-}
+/* CARDS */
 
 .card {
   min-height: 100px;
@@ -216,21 +342,51 @@ nav {
   padding-right: 5px;
 }
 
-.fade-box {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  text-align: center;
-  margin: 0;
-  padding: 30px 0;
-
-  /* "transparent" only works here because == rgba(0,0,0,0) */
-  background-image: linear-gradient(to bottom, transparent, black);
-}
-
 .blurred {
   filter: blur(0.25rem);
+}
+
+/* View More Button */
+
+.view-more {
+  justify-self: center;
+  padding: 1.5rem;
+  text-decoration: underline;
+}
+
+.view-more:hover {
+  font-weight: 700;
+}
+
+/* FOOTER */
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 1rem;
+  margin: 3rem 0 2rem 0;
+  border-top: 1px solid #cccccc;
+}
+
+.footer-menu {
+  padding: 1rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+footer a {
+  padding: 1rem;
+  text-transform: capitalize;
+}
+
+footer a:hover {
+  color: #eb3844;
+}
+
+footer p {
+  color: #555;
+  font-size: 1rem;
 }
 
 /* ABOUT PAGE */
@@ -243,7 +399,7 @@ nav {
 }
 
 .about {
-  min-height: 30vh;
+  min-height: 300px;
   padding: 2rem;
 }
 
@@ -256,24 +412,25 @@ nav {
   color: #cccccc;
 }
 
-/* TEAM MEMBER */
+/* TEAM MEMBERS */
 
 .meet-the-team {
   display: grid;
   grid-template-columns: minmax(100px, 1000px);
   justify-content: center;
+  padding: 2rem;
 }
 
 .team {
   display: grid;
-  grid-template-columns: repeat(auto-fit, 225px);
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   justify-content: center;
   justify-items: center;
   gap: 2rem;
 }
 
 .team-member {
-  background: #eee;
+  background-color: #eee;
   border-radius: 0.5rem;
   text-align: center;
   box-shadow: 2rem 2rem 6rem rgba(0, 0, 0, 0.15);
@@ -286,11 +443,80 @@ nav {
 
 .team-member img {
   width: 100%;
-  height: 225px;
+  height: 350px;
   object-fit: cover;
   border-radius: 0.5rem 0.5rem 0 0rem;
 }
 
 .member-info {
   padding: 1rem;
+}
+
+/* MEDIA SETTINGS */
+
+@media screen and (max-width: 425px) {
+  .main-headline {
+    font-size: 3.5rem;
+  }
+  /* Put nav on two rows */
+  nav {
+    justify-items: center;
+    justify-content: center;
+    grid-auto-flow: row;
+    gap: 2rem;
+  }
+
+  .selection {
+    font-size: 1.2rem;
+    padding: 1.5rem 0;
+    justify-self: center;
+  }
+
+  .selection a {
+    padding: 0.5rem 1rem;
+    margin-right: 0.25rem;
+  }
+
+  .sort i {
+    padding-right: 0.25rem;
+  }
+
+  .range i {
+    padding-left: 0.25rem;
+  }
+
+  /* Put image above headline */
+  .card {
+    grid-auto-flow: row;
+    grid-template-columns: 1fr;
+  }
+
+  .thumbnail {
+    width: 100%;
+    height: 225px;
+  }
+
+  .action-item {
+    font-size: 1.1rem;
+  }
+
+  .upvote {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 0.5rem;
+    font-size: 1.1rem;
+    margin: 0.25rem;
+    border-radius: 3px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .menu a {
+    font-size: 1.1rem;
+  }
+
+  .footer-menu {
+    font-size: 0.9rem;
+  }
 }
